@@ -30,4 +30,4 @@ JSON funciona mediante la representación de datos de forma jerárquica, mediant
 ``` { "name": "Jane Smith", "age": 35, "city": "San Francisco", "phone": "014158889275", "email": "janesmith@sample.com" } ```
 ```
 
-En este ejemplo, "name", "age", "city", "phone" y "email" son las claves, y "Jane Smith", "35", "San Francisco", "014158889275" y "janesmith@sample.com" son los valores correspondientes.
+En este ejemplo, "name", "age", "city", "phone" y "email" son las claves, y "Jane Smith", "35", "San Francisco", "014158889275" y "janesmith@sample.com" son los valores correspondientes._::,:;[ÑÑ[Ñ{Ñ{}}

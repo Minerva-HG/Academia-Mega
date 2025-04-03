@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASE 8</title>
+</head>
+<body>
+   <script>
+    //TIMEOUT
+    // console.log("inicio");
+    // setTimeout(()=>{
+    //    console.log("Esto se ejecuta despues de 5 segundos");
+    //}, 5000);
+    
+    //console.log("Fin");
+
+    /*console.log("Inicio");
+
+    console.log("Tarea1");
+    console.log("Tarea2");
+
+    setTimeout(()=> { 
+    console.log("Esto se ejecuta despues de 5 segundos");
+    console.log("Tarea3");
+    console.log("Gracias por invitarme"); 
+    }, 7000);
+
+    console.log("Tarea4");
+    console.log("Tarea5");
+    console.log("Fin");*/
+
+
+    //Promesa//
+    console.log("Bienvenidos a la pagina web")
+    const myPromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+        let exito = true;
+        if (exito) resolve("El clima de hoy es...")
+        else reject("Promesa rechazada");
+         }, 500);
+    });
+
+    myPromise.then(resultado => console.log(resultado))
+    console.log("........")
+        promesa
+            .then(resultado => console.log(resultado))
+            .catch(error => console.log(error))
+            .finally(()=> console.log("Promesa Terminada"));
+    //*************************************************************************
+
+
+    // async / await
+            async function obtenerDatos(){
+            try {
+                console.log("Obteniendo datos...");
+                let respuesta = await new Promise( resolve =>
+                    setTimeout(()=>resolve("Datos recibidos"), 4000));
+                console.log(respuesta);
+            } catch(error) {
+                console.error("Error: ", error);
+            }
+        }
+        obtenerDatos();
+        console.log("Este mensaje se muestra antes de que lleguen los datos");
+
+//******************************************************
+
+
+
+
+   </script>   
+</body>
+</html>
