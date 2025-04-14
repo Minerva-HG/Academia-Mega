@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Clase 10</title>
+</head>
+<body>
+    <h1> Login Ficticio</h1>
+    <input type="text" id="username" placeholder="Usuario">
+    <input type="text" id="password" placeholder="Contraseña">
+    <br><br>
+    <button>Iniciar Sesión</button>
+    <button>Cerrar Sesión</button>
+
+    <script src="authModule.js"></script>
+    <script src="userSingleton.js"></script>
+    <script>
+        function login(){
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+            //console.log(user);
+            //console.log(pass);
+            AutModule.login(user, pass)
+        }
+        function logout(){
+            AutModule.logout();
+
+        }
+    </script>
+</body>
+</html>

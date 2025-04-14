@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeApi</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    <h1>Lista de Pokemon</h1>
+    <div id="pokemon-container"></div>
+
+    <script>
+
+        async function obtenerPokemones(){
+            const container = document.getElementById("pokemon-container");
+
+            for(let i=1; i<=250; i++) {
+                try {
+                     const respuesta = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
+                    console.log(respuesta);
+
+                    const data = await respuesta.json();
+                    console.log(data);
+
+                    const card = document.createElement("div");
+                    card.className = "card";
+                    card.innerHTML = `
+                    <img src="${data.sprites.front_default}" alt="${data.name}">
+                    <h2>${data.name}</h2>
+                    <h3> ${data.order}</h3>
+                    `; 
+                    container.appendChild(card);
+
+                } catch(error) {
+                    console.log("Error al obtener el pokemon:", error);
+                }
+            }
+        }
+
+        //async function obtenerImagenes(){
+           /* const container = document.getElementById("pokemon-container");
+
+            for(let i=1; i<=5; i++) {
+                try {
+                    const respuesta = await fetch(`https://rickandmortyapi.com/api/character/${i}`);
+                    console.log(respuesta);
+
+                    const data = await respuesta.json();
+                    console.log(data);
+
+                    const card = document.createElement("div");
+                    card.className = "card";
+                    card.innerHTML = `
+                    <img src="${data.image}">
+                    <h2>${data.name}</h2>
+                    <p>Genero: ${data.gender}</p>
+                    `; 
+                    container.appendChild(card);
+                } catch(error) {
+                    console.log("Error al obtener el pokemon:", error);
+                }
+            }
+        }*/
+        obtenerPokemones();
+
+       // obtenerImagenes();
+    </script>
+    
+</body>
+</html>
