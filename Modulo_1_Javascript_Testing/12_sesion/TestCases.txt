@@ -1,0 +1,41 @@
+Plan de Pruebas: Calculadora de Promedioes
+
+Objetivo: Verificar que la función calcularPromedio retorne correctamente el promedio
+de tres calificaciones entre 0 y 10, y maneje errores adecuadamente.
+
+Escenario de Prueba 1:
+
+Nombre: Promedio válido
+Entradas: 7, 8 , 9
+Resultado esperado: 8
+Resultado obtenido: 8
+Estado: Éxito
+
+Escenario de Prueba 2
+
+Nombre: Campo vacío
+Entradas: 5 , "" , 10
+Resultado esperado: "Todas las notas deben de ser números"
+Resultado obtenido: "Todas las notas deben de ser números"
+Estado: Éxito
+
+Escenario de Prueba 3
+
+Nombre: Nota fuera de rango
+Entradas: -1 , 11 , 20
+Resultado esperado: "Las notas deben de estar entre 0 y 10"
+Resultado obtenido: "Las notas deben de estar entre 0 y 10"
+Estado: Éxito
+
+
+Escnario de Prueba 4
+Nombre: Datos décimales
+Entradas: 3.1416 , 3 , 3.1416
+Resultado esperado: "Introduce un valor válido. Los valores apróximados son 3 y 4"
+Resultado obtenido: "Introduce un valor válido. Los valores apróximados son 3 y 4"
+
+Escenario de Prueba 5
+Nombre: Promedio abajo de 6
+Entradas: 5 , 5 , 5
+Reusltado esperado: "El promedio es 5"
+Resultado obtenido: "El promedio es 5" (color naranja)

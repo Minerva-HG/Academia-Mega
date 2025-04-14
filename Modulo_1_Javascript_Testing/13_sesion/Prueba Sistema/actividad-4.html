@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Sistema</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;;
+        }
+        input , button {
+            margin-top: 10px; 
+            display: block;
+        }
+        
+        .error{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1> Prueba de Sistema</h1>
+    <h2>Formulario de Contactos</h2>
+
+    <form id="form">
+        <input type ="text" id="nombre" placeholder="Nombre">
+        <input type ="mail" id="correo" placeholder="Correo Electronico">
+        <input type ="password" id="password" placeholder="password">
+        <input type ="number" id="edad" placeholder="Edad">
+        <button type ="submit">Enviar</button> 
+        <p id="mensaje"></p>
+        
+
+    </form>
+
+    <script>
+        function esCorreoValido(email){
+            const regex = "/^[^\s@]+@[^\s@]+\.[^\s@]+$/"
+            return regex.text(email);
+        }
+
+        Document.getElementById("form").addEventListener("submit", (e)=>{
+            e.preventDefault();
+            const nombre = document.getElementById("nombre").value;
+            const correo = document.getElementById("correo").value;
+            const mensaje = document.getElementById("mensaje").value;
+
+            if(!nombre|| !esCorreoValido(correo)){
+                mensaje.textContent ="Datos Invalidos";
+                mensaje.className ="error";
+            }else{
+                mensaje.textContent = `Gracias por registrarse, ${nombre}!!`
+                mensaje.className=""
+            }
+
+        })
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDD Invertir Texto</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Testing: Invertir Texto</h1>
+    <div id="resultado">
+    </div>
+    <script>
+        //funcion bajo prueba
+        function invertirTexto(texto){
+            if ( typeof texto !== "string" ) return "";                        
+            return texto.split("").reverse().join("");
+
+        }
+        //sistema de test simple
+        function expect(actual){
+            return{
+                toBe(expected){
+                    const passed = actual === expected;
+                    const message = passed?
+                    `Päsó ${actual} === ${expected}`
+                    : `Falló ${actual} !== ${expected}`;
+
+                    const result = document.createElement("pre");
+                    result.textContent = message;
+                    result.className = passed ? "pass":"fail";
+                    document.getElementById("resultado").appendChild(result);
+                }
+
+            }
+        }
+
+        //Pruebas
+        expect( invertirTexto("hola")).toBe("Hi");
+        expect( invertirTexto("TDD")).toBe("TESTING");
+        expect( invertirTexto("Marcos12")).toBe("sanodA");
+        //expect( invertirTexto("123")).toBe("321");
+
+        //expect ( invertirTexto("hola")).toBe("aloh");
+
+    </script>
+</body>
+</html>

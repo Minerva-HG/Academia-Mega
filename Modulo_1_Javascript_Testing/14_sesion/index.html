@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 14: TDD</title>
+</head>
+<body>
+    <h1> Clase 14 : Introduccion a TDD</h1>
+    <script>
+        function expect(actual){
+            return{
+                toBe(expect){
+                    if(actual === expect){
+                        console.log("Pasó")
+                    }else{
+                        console.error(`falló: esperando ${expect}, recibido ${actual}`);
+                    }
+                }
+            }
+        }
+
+        function esPar(n){
+            if(typeof n !== "number") return false;
+            return n % 2=== 0;
+        }
+
+        //Test sin implementar la funcion aun
+        expect(esPar(2)).toBe(true)
+        expect(esPar(3)).toBe(false)
+    </script>
+</body>
+</html>

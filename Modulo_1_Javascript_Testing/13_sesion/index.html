@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 13</title>
+</head>
+<body>
+    <h1>Tipos de Pruebas en el Desarrollo de Software</h1>
+    <script>
+
+        //Pruebas unitarias
+        function suma(a,b){
+            return a +b;
+
+        }
+        console.log(suma(2,3))
+        console.assert(suma(2,3)) === 5, "Error en la suma"
+
+
+        // Pruebas de integracion
+        fetch("api....").then(res => res.jason()).then(data => mostrarUsuario (data))
+
+        async function traerAPI(){
+            const apialgo = await fetch("api")
+            const data = await apialgo.json()
+
+        }
+
+        //Pruebas de sistema
+        document.getElementById("form").addEventListener("submit", (e)=>{
+            e.preventDefault();
+            const nombre = document.getElementById("nombre").value;
+            document.getElementById("resultado").textContent = 'Hola ${nombre}'
+        })
+
+
+    </script>
+
+    
+</body>
+</html>

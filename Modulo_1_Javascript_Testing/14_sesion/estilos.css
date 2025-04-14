@@ -1,0 +1,19 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20 px;
+}
+
+.pass{
+    color:green;
+}
+
+.fail{
+    color:red;
+}
+
+pre{
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}

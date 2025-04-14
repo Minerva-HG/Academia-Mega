@@ -1,0 +1,42 @@
+/*
+*{
+    border: 1px solid red;
+}
+    */
+    
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .container{
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        height: 100vs;
+        box-shadow: 0 2px 10px rgb(0,0,0,0.1);
+        width: 300px;
+    }
+    
+    input{
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 05.rem;
+    }
+    button{
+        width: 100%;
+        padding: 0.5rem;
+        background-color: #007bff;
+        border: none;
+        cursor: pointer;
+    }
+    #message{
+        margin-top: 1rem;
+        font-weight: bold;
+    
+    }
