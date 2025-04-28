@@ -1,0 +1,18 @@
+li{
+    color:red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form{
+    width: 400px;
+    text-align: center;
+}
+
+input{
+    display: block;
+    padding: 6px;
+    margin: 6px;
+}
+
+button{
+    width: 75%;
+}

@@ -8,5 +8,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Proyecto01';
+  name = 'Minerva Hernández Godinez';
+  dato ='QA Tester';
+  Expe = 'con 7 años de experiencia';
 }
