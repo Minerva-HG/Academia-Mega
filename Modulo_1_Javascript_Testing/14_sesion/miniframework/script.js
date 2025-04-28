@@ -30,7 +30,7 @@ function validarUsuario(usuario){
 
 const usuarioValido = {nombre:"Mine", correo:"mine@hotmail.com"};
 const usuarioValido2 = {nombre:"Mine", correo:"minialuiz@hotmail.com"};
-const usuarioinValido = {nombre:"JAvi", correo:"hjl12@hotmailcom"};
+const usuarioinValido = {nombre:"Carlos", correo:"hjl12@hotmailcom"};
 
 expect( usuarioValido).toEqual(usuarioValido2);
 //expect( validarUsuario(usuarioValido) ).toBe(true);

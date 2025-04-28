@@ -1,0 +1,22 @@
+.card{
+    border: 1px solid #3171bb;
+    padding: 16px;
+    max-width: 300px;
+    margin: auto;
+    border-radius: 8px;
+    text-align: center;
+}
+
+img{
+    border-radius: 50%;
+    border: 1px solid #3171bb;
+    margin-bottom: 12px;
+    width: 100px;
+}
+
+input{
+    display: block;
+    margin: 8px auto;
+    width: 90%;
+    padding: 4px;
+}
