@@ -5,30 +5,32 @@ import { CardComponent } from './Components/card/card.component';
 import { TarjetaComponent } from './Components/tarjeta/tarjeta.component';
 import { CommonModule } from '@angular/common';
 import { TodoComponent } from './Components/todo/todo.component';
+import { ProductManagerComponent } from "./Components/product-manager/product-manager.component";
 
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet, 
-    Saludo, 
-    CardComponent, 
-    TarjetaComponent, 
+    RouterOutlet,
+    Saludo,
+    CardComponent,
+    TarjetaComponent,
     CommonModule,
-  TodoComponent],
+    TodoComponent,
+    ProductManagerComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 
 export class AppComponent {
   
-  isVisible = true;
-
-  frutas = [
-    "Manzana", 
-    "Platano", 
-    "Naranaja", 
-    "Uva", 
-    "Pera",
-    "Piña"
   ];
+  */
+
+  rolUsuario: string = "admin";
+  edad: number = 3;
+
+  tareaImportante: boolean = true;
+  
+  isUrgente: boolean = false;
 }

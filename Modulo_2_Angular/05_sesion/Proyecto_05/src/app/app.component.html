@@ -1,0 +1,79 @@
+<!-- CLASE 2 | ANGULAR 
+
+<h1>Este es el componente principal</h1>
+
+<h2>Estos son los componentes secundarios</h2>
+ <app-saludo></app-saludo>
+<app-saludo></app-saludo>
+<app-saludo></app-saludo>
+<app-saludo></app-saludo>-->
+
+<!-- CLASE 3 | ANGULAR
+<div class="container">
+  
+   <app-card></app-card 
+
+</div> -->
+
+<!-- CLASE 3 | ANGULAR
+<app-tarjeta></app-tarjeta>
+
+-->
+
+
+
+<h1>Directivas Estructurales</h1>
+<!--CLASE 4 | ANGULAR 
+<h2>*ngif</h2>
+
+<div class="container">
+
+   <div>
+      <div *ngIf="isVisible">
+         Este mensaje se muestra si isVisible es true
+      </div>
+   
+      <button (click)="isVisible = !isVisible">Mostrar/Ocultar</button>   
+   </div>
+   
+   <div>
+      <ul>
+         <h3>Frutas</h3>
+         <li *ngFor="let fruta of frutas; let i = index">
+            {{i + 1}}.- {{fruta}}
+         </li>
+      </ul>
+   </div>
+
+</div>
+
+<app-todo></app-todo>
+
+-->
+
+
+
+<!--CLASE 5 | ANGULAR 
+-->
+
+<!--NgSwitch-->
+<!-- <h3>Panel de Usuario</h3>
+<div [ngSwitch]="rolUsuario">
+   <p *ngSwitchCase="'admin'">Eres Administrador</p>
+   <p *ngSwitchCase="'user'">Eres un Usuario Normal</p>
+   <p *ngSwitchCase="'invitado'">Eres un Invitado</p>
+   <p *ngSwitchDefault>Rol no reconocido</p>
+</div> -->
+
+<!-- ngClass  -->
+
+<!-- <p [ngClass]="{'importante': tareaImportante}">
+   Esta tarea es importante
+</p> -->
+
+<!-- ngStyle -->
+<!-- <p [ngStyle]="{color: isUrgente ? 'red':'green', fontSize : '20px'}">
+   ¡Esta tarea es urgente!
+</p> -->
+
+<app-product-manager></app-product-manager>

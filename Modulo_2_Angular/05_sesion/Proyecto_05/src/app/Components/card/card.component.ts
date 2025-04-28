@@ -17,6 +17,6 @@ export class CardComponent {
   nombre = "Minerva"
 
   mostrarAlerta(){
-    alert("Hola Godinez Minerva");
+    alert("Hola Mn");
   }
 }

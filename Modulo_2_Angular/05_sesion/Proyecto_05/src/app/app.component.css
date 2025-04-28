@@ -1,0 +1,11 @@
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 30px;
+}
+
+.importante{
+    color: red;
+    font-weight: bold;
+}
