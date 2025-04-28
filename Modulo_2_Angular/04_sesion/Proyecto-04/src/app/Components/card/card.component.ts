@@ -12,11 +12,11 @@ export class CardComponent {
   contenido = "Esto es una card que vamos a estar trabajando"
   botonText = "Conocer más..."
   img = "https://picsum.photos/640/640?r" + Math.random()
- // imgMegacable = "https://inversionistas.megacable.com.mx/images/bg/megacable_.jpg"
+  imgMegacable = "https://inversionistas.megacable.com.mx/images/bg/megacable_.jpg"
 
-  nombre = "Minerva Godinez"
+  nombre = "Javier Ramirez"
 
   mostrarAlerta(){
-    alert("Hola Minerva Hernandez");
+    alert("Hola Javier Ramirez");
   }
 }
