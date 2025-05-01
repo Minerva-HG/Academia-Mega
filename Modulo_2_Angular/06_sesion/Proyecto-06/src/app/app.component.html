@@ -1,0 +1,59 @@
+<!--
+<h1>Este es el componente principal</h1>
+<h2>Estos son los componentes secundarios</h2>
+<div class="container">
+  <app-card></app-card>
+  <app-tarjeta></app-tarjeta>
+</div>
+
+<h1>Directivas estructurales</h1>
+<h2>*ngIf</h2>
+<div class="container">
+
+  <div *ngIf="isVisible">
+    Este mensaje se muestra si isVisible true
+  </div>
+  <button (click)="isVisible=!isVisible">Mostrar/Ocultar</button>
+</div>
+
+<div>
+  <ul>
+    <li *ngFor="let fruta of frutas; let i = index">
+      {{i+1}}.- {{fruta}}
+    </li>
+  </ul>
+</div>
+
+<div>
+  <app-todo></app-todo>
+</div>
+
+
+<h1>Directivas estructurales</h1>
+<h3>Panel de Usuarios</h3>
+<div [ngSwitch]="rolUsuario">
+  <p *ngSwitchCase="'admina'">Eres Administrador</p>
+  <p *ngSwitchCase="'user'">Eres un usuario normal</p>
+  <p *ngSwitchCase="'invitado'">Eres un Invitado</p>
+  <p *ngSwitchDefault>Rol no reconocido</p>
+</div>
+
+<p>-- ngClass--</p>
+<p [ngClass]="{'importante': tareaImportante}">
+  Esta tarea es importante
+</p>
+
+<p>-- ngStyle--</p>
+<p [ngStyle]="{'color': isUrgente?'blue':'green', fontSize: '18px'}">
+  Esta tarea es urgente
+</p>
+
+<app-product-manager></app-product-manager>
+-->
+
+
+<h1>Rutas</h1>
+<nav>
+  <a routerLink="/">Home</a> / <a routerLink="/card">Card</a> / <a routerLink="/todo">Todo</a> / <a routerLink="/gestor">Gestor</a> / <a routerLink="/tarjeta">Tarjeta</a> / <a routerLink="/Otro">Otro</a>
+</nav>
+<router-outlet />
