@@ -22,6 +22,9 @@ import { ErrorComponent } from './Page/error/error.component';
 
 export class AppComponent {
 
+  
+ 
+  
 
   rolUsuario: string = "admin";
   edad: number = 3;
