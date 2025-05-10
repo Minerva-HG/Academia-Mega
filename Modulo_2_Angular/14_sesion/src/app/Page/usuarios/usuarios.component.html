@@ -1,0 +1,6 @@
+<h1>Directorio de Usuarios</h1>
+
+<div class="container">
+    <app-user-list (selectedUser)="user = $event"></app-user-list>
+<app-user-detail [user]="user"></app-user-detail>
+</div>

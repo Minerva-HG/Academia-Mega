@@ -1,0 +1,72 @@
+<div class="container">
+    <h1>Registro de Usuario</h1>
+
+    <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+        
+        <div class="form-control">
+            <label for="nombre">Nombre </label>
+            <input 
+                type="text" 
+                id="nombre" 
+                name="nombre" 
+                [(ngModel)]="usuario.nombre"
+                required
+                minlength="3"
+                #nombre="ngModel"
+                placeholder="Escribe tu nombre"
+            >
+
+            <div class="error" *ngIf="nombre.invalid && nombre.touched">
+                El nombre es obligatorio y debe tener al menos 3 caracteres
+            </div>
+        </div>
+        
+        <div class="form-control">
+            <label for="email">Email </label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                [(ngModel)]="usuario.email"
+                required
+                #email="ngModel"
+                placeholder="Escribe tu email"
+            >
+
+            <div class="error" *ngIf="email.invalid && email.touched">
+                Ingresa un correo válido
+            </div>
+        </div>
+       
+        <div class="form-control">
+            <label for="edad">Edad </label>
+            <input 
+                type="number" 
+                id="edad" 
+                name="edad" 
+                [(ngModel)]="usuario.edad"
+                required
+                min="18"
+                #edad="ngModel"
+                placeholder="Escribe tu edad"
+            >
+
+            <div class="error" *ngIf="edad.invalid && edad.touched">
+                Debes tener al menos 18 años
+            </div>
+        </div>
+
+       
+        <button
+            [disabled]="formulario.invalid"
+            type="submit"
+        >
+            Enviar
+        </button>
+    </form>
+
+    <h3>Datos Actuales</h3>
+    <pre>
+        {{usuario | json}}
+    </pre>
+</div>
