@@ -1,0 +1,28 @@
+
+<h1>Rutas</h1>
+
+<nav>
+   <a routerLink="/">Usuarios</a>
+   <a routerLink="/apis">Apis</a>
+   <a routerLink="/formulario">Formulario</a>
+   <a routerLink="/servicios">Servicios</a>
+   <a routerLink="/componentes">Componentes</a>
+   <a routerLink="/home">Home</a>
+   <a routerLink="/card">Card</a>
+   <a routerLink="/todo">Todo</a>
+   <a routerLink="/gestor">Gestor</a>
+   <a routerLink="/tarjeta">Tarjeta</a>
+   <a routerLink="/error">Error</a>
+</nav>
+
+
+<p>Estoy en APPComponent</p>
+<div>
+   <p>{{nombre | uppercase}}</p>
+   <p>{{fechaNacimiento | edad}}</p>
+   <p>{{salario | currency: "EUR"}}</p>
+</div>
+
+
+
+<router-outlet></router-outlet>
