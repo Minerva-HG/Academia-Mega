@@ -1,0 +1,26 @@
+<h1>Lista de Productos</h1>
+
+<p>{{itemSeleccionado?.nombre}}</p>
+<!-- <p>{{itemSeleccionado.nombre | json }}</p> -->
+
+<div class="container">
+    
+    <!-- Columna de Productos -->
+    <div class="containerProductos">
+        <ng-container *ngIf="items">
+            <app-productos
+              *ngFor="let item of items"
+              [info]="item" (seleccionado)="seleccionarItem($event)"
+              class="card"
+            ></app-productos>
+        </ng-container>
+    </div>
+
+    <!-- Columna de Detalle -->
+    <div style="width: 50%;">
+        <app-detalles
+            [item]="itemSeleccionado"
+        ></app-detalles>
+    </div>
+
+</div>

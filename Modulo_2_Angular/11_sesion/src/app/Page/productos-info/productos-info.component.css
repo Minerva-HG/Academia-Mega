@@ -1,0 +1,22 @@
+.container{
+    display: flex; 
+    gap: 2rem;
+}
+
+.containerProductos{
+    width: 50%;
+}
+
+@media(max-width: 600px){
+    .container{
+        display: block; 
+        width: 100%;
+    }
+    .containerProductos{
+        width: 100%;
+    }
+    .card{
+        display: block;
+        width: 100%;
+    }
+}
