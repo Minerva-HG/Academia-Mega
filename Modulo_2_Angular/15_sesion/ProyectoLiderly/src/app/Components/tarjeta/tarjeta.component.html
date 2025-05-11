@@ -1,0 +1,8 @@
+<div class="card">
+  <h2>{{mensaje}}</h2>
+  <img [src]="imagen" alt="Foto de perfil">
+  <input type="text" [(ngModel)]="nombre" placeholder="Escribe tu nombre">
+  <input type="text" [(ngModel)]="imagen" placeholder="URL de tu imagen">
+
+  <button (click)="cambiarSaludo()">Actualizar Datos</button>
+</div>

@@ -1,0 +1,7 @@
+.container{
+  display: flex;
+  gap: 20px;
+}
+.card{
+  border: 1px solid #ccc;
+}

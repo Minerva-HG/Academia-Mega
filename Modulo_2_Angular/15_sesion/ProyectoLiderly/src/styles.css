@@ -1,0 +1,43 @@
+body {
+    min-width: 60rem;
+}
+body, .ud-main-content-wrapper {
+    display: flex
+;
+    min-height: 100vh;
+    flex-direction: column;
+}
+body {
+    font-family: var(--font-stack-text);
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1.6rem;
+    color: #2a2b3f;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+hoja de estilo del usuario-agente
+body {
+    display: block;
+    margin: 8px;
+}
+
+body {
+    font-family: sans-serif;
+    -webkit-font-smoothing: auto;
+    -moz-font-smoothing: auto;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: auto;
+    text-rendering: optimizeLegibility;
+    font-smooth: always;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }

@@ -1,0 +1,15 @@
+<h1>Lista de productos!</h1>
+
+ <p>{{itemSeleccionado?.nombre}}</p>
+
+<div class="container">
+
+  <div class="containerProductos">
+    <app-productos *ngFor="let item of items" [info] = "item" (seleccionado)="seleccionarItem($event)" class="card">
+    </app-productos>
+  </div>
+  <div style="width: 50%;">
+    <app-detalles [item]="itemSeleccionado"></app-detalles>
+  </div>
+
+</div>

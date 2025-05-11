@@ -1,0 +1,8 @@
+<div *ngIf="user" class="detail">
+    <img [src]="user.picture.large" alt="Foto grande">
+    <h2>{{user | fullName}}</h2>
+    <p><strong>Tel: </strong>{{user.phone}}</p>
+    <p><strong>Fecha Nac.: </strong>{{user.dob.date | date: 'longDate'}}</p>
+    <p><strong>Edad: </strong>{{user.dob.age}}</p>
+    <p><strong>Dirección: </strong>{{user.location.city}}</p>
+  </div>

@@ -1,0 +1,12 @@
+<div class="card">
+  <img [src]="img" alt="">
+  <div class="card-content">
+    <h3 class="card-title">Bienvenido >>> {{title}}</h3>
+    <p class="card-description">{{contenido}}</p>
+    <button class="btn" (click)="mostrarAlerta()">{{botonText}}</button>
+  
+
+    <input type="text" [(ngModel)]="nombre" placeholder="Escribe un titulo">
+    <p className="text-gray-600 text-sm mb-2">{{nombre}}</p>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<h1>Clase Http-Client</h1>
+<h2>Lista de productos</h2>
+<div *ngFor = "let product of products">
+  <h3>{{product.title}}</h3>
+  <img [src]="product.image" width="100">
+  <p>{{product.description}}</p>
+  <strong>{{product.price}}</strong>
+</div>

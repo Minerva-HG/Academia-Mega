@@ -1,0 +1,18 @@
+<div class="todo-container">
+
+  <h2>Lista de Tareas</h2>
+  <div style="display: flex; margin-bottom: 1rem;">
+    <input type="text" [(ngModel)] = "nuevaTarea" placeholder="askdjhasdh">
+    <button (click)="agregarTareas()">Agregar</button>
+  </div>
+  <button (click)="limpiarTareas()">Limpiar</button>
+
+  <p *ngIf="tareas.length === 0">No hay tareas pendientes</p>
+  <ul>
+    <li *ngFor="let tarea of tareas; let i = index">
+      <span [style.textDecoration]="tarea.completada? 'line-through' : 'none'">{{tarea.texto}}</span>
+      <button (click)="toggleCompletar(i)">{{tarea.completada? "Desmarcar":"Completar"}}</button>
+    </li>
+  </ul>
+
+</div>

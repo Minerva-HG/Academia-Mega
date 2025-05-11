@@ -1,0 +1,6 @@
+<div *ngFor = "let user of users" class="card" (click)="onSelect(user)">
+  <p>{{user.gender}}</p>
+  <img [src]="user.picture.medium" alt="">
+  <p>{{user | fullName}}</p>
+  <p>{{user.email}}</p>
+</div>

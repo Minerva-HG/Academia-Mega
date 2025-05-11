@@ -1,0 +1,13 @@
+<div *ngIf="item;else seleccionaAlgo">
+  <h2>Detalles del producto</h2>
+
+  <p><strong>Nombre:</strong> {{item.nombre}}</p>
+  <p><strong>Nombre:</strong> {{item.descripcion}}</p>
+  <p><strong>Nombre:</strong> {{item.precio}}</p>
+
+
+</div>
+
+<ng-template #seleccionaAlgo>
+  <p>Selecciona un producto para ver los detalles</p>
+</ng-template>
