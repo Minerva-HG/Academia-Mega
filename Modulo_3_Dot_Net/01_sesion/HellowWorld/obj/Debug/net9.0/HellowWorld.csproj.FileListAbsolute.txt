@@ -1,0 +1,15 @@
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\bin\Debug\net9.0\HellowWorld.exe
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\bin\Debug\net9.0\HellowWorld.deps.json
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\bin\Debug\net9.0\HellowWorld.runtimeconfig.json
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\bin\Debug\net9.0\HellowWorld.dll
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\bin\Debug\net9.0\HellowWorld.pdb
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\obj\Debug\net9.0\HellowWorld.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\obj\Debug\net9.0\HellowWorld.AssemblyInfoInputs.cache
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\obj\Debug\net9.0\HellowWorld.AssemblyInfo.cs
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\obj\Debug\net9.0\HellowWorld.csproj.CoreCompileInputs.cache
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\obj\Debug\net9.0\HellowWorld.sourcelink.json
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\obj\Debug\net9.0\HellowWorld.dll
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\obj\Debug\net9.0\refint\HellowWorld.dll
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\obj\Debug\net9.0\HellowWorld.pdb
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\obj\Debug\net9.0\HellowWorld.genruntimeconfig.cache
+C:\Proyectos\Liderly\Academia-Mega\Modulo_3_Dot_Net\01_sesion\HellowWorld\obj\Debug\net9.0\ref\HellowWorld.dll
