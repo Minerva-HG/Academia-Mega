@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("HellowWorld")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("PrimeraAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3774195f3f25bc24bfcfd9a14fa114a4a55b57b")]
-[assembly: System.Reflection.AssemblyProductAttribute("HellowWorld")]
-[assembly: System.Reflection.AssemblyTitleAttribute("HellowWorld")]
+[assembly: System.Reflection.AssemblyProductAttribute("PrimeraAPI")]
+[assembly: System.Reflection.AssemblyTitleAttribute("PrimeraAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

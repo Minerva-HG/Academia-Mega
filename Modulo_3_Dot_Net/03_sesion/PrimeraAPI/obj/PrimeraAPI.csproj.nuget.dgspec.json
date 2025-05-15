@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Proyectos\\Liderly\\Academia-Mega\\Modulo_3_Dot_Net\\01_sesion\\HellowWorld\\HellowWorld.csproj": {}
+    "C:\\Proyectos\\Liderly\\Academia-Mega\\Modulo_3_Dot_Net\\03_sesion\\PrimeraAPI\\PrimeraAPI.csproj": {}
   },
   "projects": {
-    "C:\\Proyectos\\Liderly\\Academia-Mega\\Modulo_3_Dot_Net\\01_sesion\\HellowWorld\\HellowWorld.csproj": {
+    "C:\\Proyectos\\Liderly\\Academia-Mega\\Modulo_3_Dot_Net\\03_sesion\\PrimeraAPI\\PrimeraAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Proyectos\\Liderly\\Academia-Mega\\Modulo_3_Dot_Net\\01_sesion\\HellowWorld\\HellowWorld.csproj",
-        "projectName": "HellowWorld",
-        "projectPath": "C:\\Proyectos\\Liderly\\Academia-Mega\\Modulo_3_Dot_Net\\01_sesion\\HellowWorld\\HellowWorld.csproj",
+        "projectUniqueName": "C:\\Proyectos\\Liderly\\Academia-Mega\\Modulo_3_Dot_Net\\03_sesion\\PrimeraAPI\\PrimeraAPI.csproj",
+        "projectName": "PrimeraAPI",
+        "projectPath": "C:\\Proyectos\\Liderly\\Academia-Mega\\Modulo_3_Dot_Net\\03_sesion\\PrimeraAPI\\PrimeraAPI.csproj",
         "packagesPath": "C:\\Users\\minia\\.nuget\\packages\\",
-        "outputPath": "C:\\Proyectos\\Liderly\\Academia-Mega\\Modulo_3_Dot_Net\\01_sesion\\HellowWorld\\obj\\",
+        "outputPath": "C:\\Proyectos\\Liderly\\Academia-Mega\\Modulo_3_Dot_Net\\03_sesion\\PrimeraAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\minia\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +43,12 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,6 +61,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
