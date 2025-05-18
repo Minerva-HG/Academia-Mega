@@ -1,5 +1,6 @@
 ﻿// mi primer programa en C#
 //Actual
+//Hola mundo
 using System;
 
 class Program
