@@ -9,6 +9,7 @@
       "HellowWorld/1.0.0": {
         "runtime": {
           "HellowWorld.dll": {}
+          
         }
       }
     }
