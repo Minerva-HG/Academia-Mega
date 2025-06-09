@@ -1,0 +1,23 @@
+@model TiendaMVC.Models.Producto;
+
+@{
+    ViewData["Title"]="Eliminar producto";
+}
+
+
+<h1>@ViewData["Title"]</h1>
+<h3>Confirmaciónque desea eliminar eliminar producto selecionado</nav></nav></h3>
+<div>
+    <h4>@Model.Nombre</h4>
+    <p>Precio: @Model.Precio</p>
+</div>
+
+<form  asp-action="Delete" method="post">    
+    <input type="hidden" asp-for="Id">
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>        
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
