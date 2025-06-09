@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\PrimeraAPI\\PrimeraAPI.csproj": {}
+    "C:\\Users\\mihernandezg\\Documents\\Minerva Hernandez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\PrimeraAPI\\PrimeraAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\PrimeraAPI\\PrimeraAPI.csproj": {
+    "C:\\Users\\mihernandezg\\Documents\\Minerva Hernandez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\PrimeraAPI\\PrimeraAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\PrimeraAPI\\PrimeraAPI.csproj",
+        "projectUniqueName": "C:\\Users\\mihernandezg\\Documents\\Minerva Hernandez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\PrimeraAPI\\PrimeraAPI.csproj",
         "projectName": "PrimeraAPI",
-        "projectPath": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\PrimeraAPI\\PrimeraAPI.csproj",
-        "packagesPath": "C:\\Users\\jaramirezma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\PrimeraAPI\\obj\\",
+        "projectPath": "C:\\Users\\mihernandezg\\Documents\\Minerva Hernandez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\PrimeraAPI\\PrimeraAPI.csproj",
+        "packagesPath": "C:\\Users\\mihernandezg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mihernandezg\\Documents\\Minerva Hernandez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\PrimeraAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jaramirezma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mihernandezg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

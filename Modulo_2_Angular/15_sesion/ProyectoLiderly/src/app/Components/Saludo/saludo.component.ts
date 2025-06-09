@@ -8,5 +8,5 @@ import { Component } from "@angular/core";
 })
 
 export class Saludo{
-    name = "Javier Ramirez"
+    name = "Minerva Hernandez"
 }

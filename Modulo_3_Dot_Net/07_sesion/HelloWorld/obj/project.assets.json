@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jaramirezma\\.nuget\\packages\\": {},
+    "C:\\Users\\mihernandezg\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\HelloWorld\\HelloWorld.csproj",
+      "projectUniqueName": "C:\\Users\\mihernandezg\\Documents\\Minerva Hernandez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\HelloWorld\\HelloWorld.csproj",
       "projectName": "HelloWorld",
-      "projectPath": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\HelloWorld\\HelloWorld.csproj",
-      "packagesPath": "C:\\Users\\jaramirezma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jaramirezma\\Documents\\Javier Ramirez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\HelloWorld\\obj\\",
+      "projectPath": "C:\\Users\\mihernandezg\\Documents\\Minerva Hernandez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\HelloWorld\\HelloWorld.csproj",
+      "packagesPath": "C:\\Users\\mihernandezg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mihernandezg\\Documents\\Minerva Hernandez\\Cursos\\Liderly\\academia-mega\\Modulo_3\\C#\\Sesion_07\\ACADEMIA MEGA\\HelloWorld\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\jaramirezma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mihernandezg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

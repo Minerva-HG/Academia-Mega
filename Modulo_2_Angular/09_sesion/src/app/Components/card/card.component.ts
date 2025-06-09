@@ -14,9 +14,9 @@ export class CardComponent {
   img = "https://picsum.photos/640/640?r" + Math.random()
   imgMegacable = "https://inversionistas.megacable.com.mx/images/bg/megacable_.jpg"
 
-  nombre = "Javier Ramirez"
+  nombre = "Minerva Hernandez"
 
   mostrarAlerta(){
-    alert("Hola Javier Ramirez");
+    alert("Hola Minerva Hernandez");
   }
 }
