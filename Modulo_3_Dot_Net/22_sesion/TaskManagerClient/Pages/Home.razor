@@ -1,0 +1,99 @@
+﻿@page "/"
+@using TaskManagerClient.Services
+@using TaskManagerClient.Models
+@using Microsoft.AspNetCore.Components.Forms
+
+@inject ITaskReader TaskReader
+@inject ITaskWriter TaskWriter
+
+<h2>Tasks</h2>
+
+@if (tasks is null)
+{
+    <p><em>Cargando...</em></p>
+}
+else 
+{
+    <ul class="list-group">
+        @foreach (var t in tasks)
+        {
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>
+                    <input type="checkbox" checked="@t.IsDone" @onchange="@(() => ToggleDone(t))" class="form-check-input me-2" />
+                    @t.Title
+                </span>
+                <span>
+                    <button class="btn btn-sm btn-secondary me-2" @onclick="() => Edit(t)">Editar</button>
+                    <button class="btn btn-sm btn-danger" @onclick="() => Delete(t.id)">Eliminar</button>
+                </span>
+            </li>
+        }
+    </ul>
+
+    <hr />
+
+    @if (editingTask is not null)
+    {
+        <h4>Editar tarea</h4>
+        <EditForm Model="editingTask" OnValidSubmit="Save">
+            <InputText @bind-Value="editingTask.Title" class="form-control mb-2" placeholder="Título" />
+            <InputTextArea @bind-Value="editingTask.Description" class="form-control mb-2" placeholder="Descripción" />
+            <button class="btn btn-primary me-2" type="submit">Guardar</button>
+            <button class="btn btn-outline-secondary" type="button" @onclick="CancelEdit">Cancelar</button>
+        </EditForm>
+    }
+    else
+    {
+        <TaskForm OnSaved="Refresh" />
+    }
+}
+
+@code {
+    List<TaskItem>? tasks;
+    TaskItem? editingTask;
+
+    protected override async Task OnInitializedAsync() => await Refresh();
+
+    async Task Refresh()
+    {
+        tasks = (await TaskReader.GetAllAsync()).ToList();
+        editingTask = null;
+    }
+
+    async Task Delete(Guid id)
+    {
+        await TaskWriter.DeleteAsync(id);
+        await Refresh();
+    }
+
+    async Task ToggleDone(TaskItem task)
+    {
+        task.IsDone = !task.IsDone;
+        await TaskWriter.UpdateAsync(task);
+    }
+
+    void Edit(TaskItem task)
+    {
+        editingTask = new TaskItem
+        {
+            id = task.id,
+            Title = task.Title,
+            Description = task.Description,
+            IsDone = task.IsDone
+        };
+    }
+
+    async Task Save()
+    {
+        if (editingTask != null)
+        {
+            await TaskWriter.UpdateAsync(editingTask);
+        }
+        await Refresh();
+    }
+
+    void CancelEdit()
+    {
+        editingTask = null;
+    }
+}
