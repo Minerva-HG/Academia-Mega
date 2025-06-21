@@ -1,0 +1,27 @@
+<!-- Autor: Minerva Herandez Godinez -->
+<!-- Archivo de proyecto para la aplicación SkyCast usando Blazor WebAssembly -->
+
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+  <!-- Define que se utiliza el SDK de Blazor WebAssembly para este proyecto -->
+
+  <PropertyGroup>
+    <!-- Grupo de propiedades generales del proyecto -->
+    <TargetFramework>net8.0</TargetFramework> <!-- Especifica que el proyecto usa .NET 8.0 -->
+    <Nullable>enable</Nullable> <!-- Habilita las anotaciones y advertencias de nulabilidad -->
+    <ImplicitUsings>enable</ImplicitUsings> <!-- Importa automáticamente los espacios de nombres comunes -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Grupo de referencias a paquetes NuGet necesarios para el proyecto -->
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.15" /> <!-- Blazor WebAssembly principal -->
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.15" PrivateAssets="all" /> <!-- Servidor de desarrollo para Blazor WebAssembly -->
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="9.0.6" /> <!-- Soporte para políticas de resiliencia HTTP con Polly -->
+  </ItemGroup>
+
+  <Target Name="Tailwind" BeforeTargets="Build">
+    <!-- Tarea personalizada que se ejecuta antes de compilar el proyecto -->
+    <Exec Command="dotnet tailwindcss -i Styles/input.css -o wwwroot/css/app.css --minify"/>
+    <!-- Ejecuta Tailwind CSS para procesar el archivo de entrada y generar el CSS minificado de la aplicación -->
+  </Target>
+
+</Project>

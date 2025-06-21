@@ -1,0 +1,36 @@
+<!-- Autor: Minerva Herandez Godinez -->
+<!-- Archivo principal HTML para la aplicación SkyCast en Blazor WebAssembly -->
+
+<!DOCTYPE html> <!-- Define el tipo de documento HTML5 -->
+<html lang="en"> <!-- Inicia el documento HTML y establece el idioma en inglés -->
+
+<head>
+    <meta charset="utf-8" /> <!-- Define la codificación de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Hace que la página sea responsiva en dispositivos móviles -->
+    <title>SkyCast</title> <!-- Título de la pestaña del navegador -->
+    <base href="/" /> <!-- Establece la ruta base para los recursos relativos -->
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" /> <!-- Importa los estilos de Bootstrap -->
+    <link rel="stylesheet" href="css/app.css" /> <!-- Importa los estilos personalizados de la aplicación -->
+    <link rel="icon" type="image/png" href="favicon.png" /> <!-- Define el ícono de la pestaña -->
+    <link href="SkyCast.styles.css" rel="stylesheet" /> <!-- Importa estilos generados por Blazor -->
+    <link href="css/app.css" rel="stylesheet" /> <!-- Importa nuevamente los estilos personalizados (puede ser redundante) -->
+</head>
+
+<body>
+    <div id="app"> <!-- Contenedor principal donde Blazor renderiza la aplicación -->
+        <svg class="loading-progress"> <!-- SVG que muestra una animación de carga mientras inicia la app -->
+            <circle r="40%" cx="50%" cy="50%" /> <!-- Primer círculo de la animación -->
+            <circle r="40%" cx="50%" cy="50%" /> <!-- Segundo círculo de la animación -->
+        </svg>
+        <div class="loading-progress-text"></div> <!-- Texto de progreso de carga (puede ser llenado por JS) -->
+    </div>
+
+    <div id="blazor-error-ui"> <!-- UI para mostrar errores no controlados en la app -->
+        An unhandled error has occurred. <!-- Mensaje de error -->
+        <a href="" class="reload">Reload</a> <!-- Enlace para recargar la página -->
+        <a class="dismiss">🗙</a> <!-- Botón para cerrar el mensaje de error -->
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script> <!-- Script principal de Blazor WebAssembly -->
+</body>
+
+</html>
