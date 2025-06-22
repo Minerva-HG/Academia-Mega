@@ -1,0 +1,20 @@
+// Autor: Minerva Herandez Godinez
+@page "/counter" // Define la ruta "/counter" para acceder a esta página.
+
+<PageTitle>Counter</PageTitle> // Establece el título de la pestaña del navegador.
+
+<h1>Counter</h1> // Encabezado principal de la página.
+
+<p role="status">Current count: @currentCount</p> // Muestra el valor actual del contador.
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button> 
+// Botón que incrementa el contador al hacer clic. Usa estilos de Bootstrap.
+
+@code {
+    private int currentCount = 0; // Variable privada que almacena el valor actual del contador.
+
+    private void IncrementCount() // Método que incrementa el contador en uno.
+    {
+        currentCount++; // Suma uno al contador cada vez que se llama el método.
+    }
+}
