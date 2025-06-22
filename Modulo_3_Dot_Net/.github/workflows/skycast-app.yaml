@@ -1,0 +1,60 @@
+name: Build & Deploy BlazorApp
+
+on:
+  push: 
+    branches: ["main"]
+
+env:
+  DOTNET_VERSION: '8.0.x'
+  NODE_VERSION: '22.X'
+
+jobs:
+  build:
+    runs-on: ubuntu-lastest
+
+    steps: 
+      # 1. Descargar el código
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      # 2. Instalar .Net
+      - name: Setup -NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version${{ env.DOTNET_VERSION }}
+
+      # 3. Instalar Paquetes Nuget
+      - name: Instalar Paquetes Nuget
+        uses: actions/cache@v3
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+
+      # 4. Instalar Node
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      # 5. Restore and Publish
+      - name: Publicar APP Blazor
+        run: |
+          dotnet restore
+          #Inyectar la API Key
+          echo "{\"OpenWeather\":{\"Key\":\"${{ secrets.OPENWEATHER_KEY }}\"}}" > SkyCast/appsettings.Production.json
+          dotnet publish SkyCast/SkyCast.csproj -c Release -o publish
+
+      # 6. Crear Artifact
+      - name: Crear Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: publish
+          path: publish
+
+      # 7. Despliegue
+      - name: Deploy to Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .publish/wwwroot
+          force_orphan: true
