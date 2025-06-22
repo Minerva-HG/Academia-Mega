@@ -22,7 +22,7 @@ public class WeatherService
     public WeatherService(HttpClient http, IConfiguration config)
     {
         _http = http;
-        _key = config["OpenWeather:Key"] ?? ""; // Lee la clave desde la configuración
+        _key = config["OPENWEATHER_KEY"] ?? ""; // Lee la clave desde la configuración
     }
 
     /// <summary>
