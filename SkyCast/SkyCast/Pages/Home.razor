@@ -1,7 +1,82 @@
-﻿@page "/"
+﻿@page "/"                     
+@using SkyCast.Services       
+@inject WeatherService Api    
 
-<PageTitle>Home</PageTitle>
+<h1 class="text-3xl font-bold mb-4">Pronóstico</h1>
 
-<h1>Hello, world!</h1>
+<!-- Sección de entrada para escribir la ciudad y botón para buscar -->
+<div class="mb-4 flex gap-2">
+    <input 
+        @bind="city" 
+        placeholder="Ciudad..."
+        class="border rounded px-2 py-1 flex-1" />
+    <button 
+        class="bg-blue-600 text-white px-4 rounded" 
+        @onclick="Search"> 
+        Buscar 
+    </button>
+</div>
 
-Welcome to your new app.
+<!-- Mostrar mensajes según el estado de la carga -->
+@if (loading)
+{
+    <p>Cargando...</p>    @* Indicador de carga mientras se consulta la API *@
+}
+else if (error != null)
+{
+    <p class="text-red-500">@error</p>  @* Muestra mensaje de error si ocurrió alguno *@
+}
+else if (data != null)
+{
+    <!-- Mostrar resultados del clima si se obtuvo información correctamente -->
+    <div class="p-6 rounded shadow bg-white max-w-sm">
+        <h2 class="text-xl font-semibold">@data.Name</h2>
+        <p class="text-6xl">@data.Main.Temp.ToString("0") °C</p>
+        <p class="capitalize">
+            @data.Weather.FirstOrDefault()?.Description ?? "Sin descripción"
+        </p>
+        <p class="text-sm text-gray-500">Humedad: @data.Main.Humidity %</p>
+    </div>
+}
+
+@code {
+    // Ciudad inicial por defecto
+    string city = "Guadalajara";
+
+    // Indica si se está cargando la información
+    bool loading;
+
+    // Almacena errores si ocurren durante la búsqueda
+    string? error;
+
+    // Almacena los datos del clima obtenidos desde el API
+    WeatherDto? data;
+
+    /// <summary>
+    /// Método que realiza la búsqueda del clima según el valor de 'city'
+    /// </summary>
+    async Task Search()
+    {
+        loading = true;    // Muestra indicador de carga
+        error = null;      // Limpia errores previos
+
+        try
+        {
+            data = await Api.GetByCityAsync(city);  // Llama al servicio
+            if (data == null)
+                error = "Ciudad no encontrada";      // Valida si no se devolvieron datos
+        }
+        catch (Exception ex)
+        {
+            error = ex.Message;  // Captura errores (por ejemplo, si falla la conexión)
+        }
+
+        loading = false;  // Oculta indicador de carga
+    }
+
+    /// <summary>
+    /// Ejecuta la búsqueda automáticamente al cargar la página
+    /// </summary>
+    protected override async Task OnInitializedAsync()
+        => await Search();
+}

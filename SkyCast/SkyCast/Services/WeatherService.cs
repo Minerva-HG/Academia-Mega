@@ -1,31 +1,41 @@
-// Autor: Minerva Herandez Godinez
-// Servicio para obtener información del clima desde OpenWeatherMap.
+// Importa soporte para trabajar con HTTP y deserializar JSON automáticamente
+using System.Net.Http.Json;
+// Importa soporte para acceder a configuración (como claves desde appsettings o secretos)
+using Microsoft.Extensions.Configuration;
 
-using System.Net.Http.Json; // Importa métodos de extensión para trabajar con JSON en HTTP.
-using Microsoft.Extensions.Configuration; // Permite acceder a la configuración de la aplicación.
+namespace SkyCast.Services;
 
-namespace SkyCast.Services; // Define el espacio de nombres para los servicios de SkyCast.
-
-public class WeatherService // Clase principal del servicio del clima.
+/// <summary>
+/// Servicio que se conecta a la API de OpenWeather para obtener datos del clima.
+/// </summary>
+public class WeatherService
 {
-    private readonly HttpClient _http; // Cliente HTTP para realizar solicitudes web.
-    private readonly string _key; // Almacena la clave API de OpenWeather.
-    private const string baseURL = "https://openweathermap.org/data/2.5/"; // URL base de la API de OpenWeather.
+    private readonly HttpClient _http; // Cliente HTTP para hacer peticiones a la API
+    private readonly string _key;      // Clave de API para autenticarse con OpenWeather
+    private const string baseURL = "https://api.openweathermap.org/data/2.5"; // URL base de la API
 
-    // Constructor que recibe el cliente HTTP y la configuración.
+    /// <summary>
+    /// Constructor que inyecta el HttpClient y lee la clave de API desde la configuración.
+    /// </summary>
+    /// <param name="http">Cliente HTTP proporcionado por el contenedor de dependencias.</param>
+    /// <param name="config">Configuración del sistema (usualmente appsettings.json o secrets).</param>
     public WeatherService(HttpClient http, IConfiguration config)
     {
-        _http = http; // Asigna el cliente HTTP recibido.
-        _key = config["OpenWeather.key"] ?? ""; // Obtiene la clave API desde la configuración.
+        _http = http;
+        _key = config["OpenWeather:Key"] ?? ""; // Lee la clave desde la configuración
     }
 
-    // Método asíncrono para obtener el clima por ciudad.
+    /// <summary>
+    /// Obtiene el pronóstico del clima para una ciudad específica usando la API de OpenWeather.
+    /// </summary>
+    /// <param name="city">Nombre de la ciudad a consultar.</param>
+    /// <returns>Objeto WeatherDto con la información del clima, o null si no se encuentra.</returns>
     public async Task<WeatherDto?> GetByCityAsync(string city)
     {
-        // Construye la URL con la ciudad, unidades métricas, clave API y lenguaje español.
+        // Construye la URL con el nombre de la ciudad, en unidades métricas y lenguaje español
         var url = $"{baseURL}/weather?q={Uri.EscapeDataString(city)}&units=metric&appid={_key}&lang=es";
 
-        // Realiza la solicitud HTTP y deserializa la respuesta a WeatherDto.
+        // Hace la petición HTTP y deserializa automáticamente la respuesta JSON a WeatherDto
         return await _http.GetFromJsonAsync<WeatherDto>(url);
     }
 }
