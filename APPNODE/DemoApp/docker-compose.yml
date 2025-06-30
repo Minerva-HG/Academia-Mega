@@ -7,12 +7,12 @@ services:
       - db
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings_DefaultConnection=Server=MEGANG-384.evolution.corp\\;Database=***;User Id=***daDB;password=****.
+      - ConnectionStrings_DefaultConnection=Server=MEGANG-384.evolution.corp\\;Database=TiendaDB;User Id=usuarioTiendaDB;password=t2A3ix71APgK.
   db:
     image: "mcr.microsoft.com/mssql/server:2019-latest"
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=****.
+      - SA_PASSWORD=t2A3ix71APgK.
     ports:
       - "1433:1433"
     volumes:
