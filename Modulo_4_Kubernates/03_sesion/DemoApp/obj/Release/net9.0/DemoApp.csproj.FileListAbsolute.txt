@@ -1,0 +1,8 @@
+C:\Proyectos\Liderly\Academia-Mega\APPNODE\DemoApp\obj\Release\net9.0\DemoApp.csproj.AssemblyReference.cache
+C:\Proyectos\Liderly\Academia-Mega\APPNODE\DemoApp\obj\Release\net9.0\DemoApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\Liderly\Academia-Mega\APPNODE\DemoApp\obj\Release\net9.0\DemoApp.AssemblyInfoInputs.cache
+C:\Proyectos\Liderly\Academia-Mega\APPNODE\DemoApp\obj\Release\net9.0\DemoApp.AssemblyInfo.cs
+C:\Proyectos\Liderly\Academia-Mega\APPNODE\DemoApp\obj\Release\net9.0\DemoApp.csproj.CoreCompileInputs.cache
+C:\Proyectos\Liderly\Academia-Mega\APPNODE\DemoApp\obj\Release\net9.0\DemoApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Proyectos\Liderly\Academia-Mega\APPNODE\DemoApp\obj\Release\net9.0\DemoApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Proyectos\Liderly\Academia-Mega\APPNODE\DemoApp\obj\Release\net9.0\DemoApp.sourcelink.json
