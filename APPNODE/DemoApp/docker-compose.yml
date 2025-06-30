@@ -7,12 +7,12 @@ services:
       - db
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings_DefaultConnection=Server=Vortex\mihernandezg\\MYSERVER;Database=Starbucks;User Id=Mi****HG;Password=5*****.
+      - ConnectionStrings_DefaultConnection=Server=MEGANG-384.evolution.corp\\;Database=***;User Id=***daDB;password=****.
   db:
     image: "mcr.microsoft.com/mssql/server:2019-latest"
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=5****.
+      - SA_PASSWORD=****.
     ports:
       - "1433:1433"
     volumes:

@@ -1,0 +1,12 @@
+networks:
+  frontnet:
+  backnet: 
+
+services:
+  web:
+    networks:
+      - frontnet
+      - backnet
+  db: 
+    networks:
+      - backnet
