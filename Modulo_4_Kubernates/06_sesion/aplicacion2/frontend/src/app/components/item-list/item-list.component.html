@@ -1,0 +1,11 @@
+<div>
+  <h2>Items</h2>
+  <ul>
+    <li *ngFor="let it of items">{{ it.name }} — ${{ it.price }}</li>
+  </ul>
+
+  <h3>Crear nuevo</h3>
+  <input placeholder="Nombre" [(ngModel)]="newItem.name">
+  <input placeholder="Precio" type="number" [(ngModel)]="newItem.price">
+  <button (click)="add()">Agregar</button>
+</div>

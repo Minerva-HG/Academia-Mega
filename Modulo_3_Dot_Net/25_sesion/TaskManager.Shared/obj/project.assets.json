@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ROG Zephyrus G16\\.nuget\\packages\\": {}
+    "C:\\Users\\MCABTI143\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ROG Zephyrus G16\\Documents\\PROGRAMMING\\Academia MEGA\\TaskManager.Shared\\TaskManager.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\MCABTI143\\Documents\\PROGRAMMING\\Academia MEGA\\TaskManager.Shared\\TaskManager.Shared.csproj",
       "projectName": "TaskManager.Shared",
-      "projectPath": "C:\\Users\\ROG Zephyrus G16\\Documents\\PROGRAMMING\\Academia MEGA\\TaskManager.Shared\\TaskManager.Shared.csproj",
-      "packagesPath": "C:\\Users\\ROG Zephyrus G16\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ROG Zephyrus G16\\Documents\\PROGRAMMING\\Academia MEGA\\TaskManager.Shared\\obj\\",
+      "projectPath": "C:\\Users\\MCABTI143\\Documents\\PROGRAMMING\\Academia MEGA\\TaskManager.Shared\\TaskManager.Shared.csproj",
+      "packagesPath": "C:\\Users\\MCABTI143\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MCABTI143\\Documents\\PROGRAMMING\\Academia MEGA\\TaskManager.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ROG Zephyrus G16\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\MCABTI143\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

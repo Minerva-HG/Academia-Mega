@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ROG Zephyrus G16\\Documents\\PROGRAMMING\\Academia MEGA\\HelloWorld\\HelloWorld.csproj": {}
+    "C:\\Users\\MCABTI143\\Documents\\PROGRAMMING\\Academia MEGA\\HelloWorld\\HelloWorld.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ROG Zephyrus G16\\Documents\\PROGRAMMING\\Academia MEGA\\HelloWorld\\HelloWorld.csproj": {
+    "C:\\Users\\MCABTI143\\Documents\\PROGRAMMING\\Academia MEGA\\HelloWorld\\HelloWorld.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ROG Zephyrus G16\\Documents\\PROGRAMMING\\Academia MEGA\\HelloWorld\\HelloWorld.csproj",
+        "projectUniqueName": "C:\\Users\\MCABTI143\\Documents\\PROGRAMMING\\Academia MEGA\\HelloWorld\\HelloWorld.csproj",
         "projectName": "HelloWorld",
-        "projectPath": "C:\\Users\\ROG Zephyrus G16\\Documents\\PROGRAMMING\\Academia MEGA\\HelloWorld\\HelloWorld.csproj",
-        "packagesPath": "C:\\Users\\ROG Zephyrus G16\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ROG Zephyrus G16\\Documents\\PROGRAMMING\\Academia MEGA\\HelloWorld\\obj\\",
+        "projectPath": "C:\\Users\\MCABTI143\\Documents\\PROGRAMMING\\Academia MEGA\\HelloWorld\\HelloWorld.csproj",
+        "packagesPath": "C:\\Users\\MCABTI143\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MCABTI143\\Documents\\PROGRAMMING\\Academia MEGA\\HelloWorld\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ROG Zephyrus G16\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\MCABTI143\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
