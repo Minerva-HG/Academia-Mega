@@ -1,0 +1,21 @@
+service:
+  db:
+    image: postgres:16-alpine
+    container_name: pgdb
+    restartt: unless-stopped
+    environment:
+      POSTGRES_DB: miBaseDatos
+      POSTGRES_USER: MinervaHG
+      POSTGRES_PASSWORD: 4T3N342406
+    ports:
+      - "5432:5432"
+    volumes:      
+      - pgdata:/var/lib/postgresql/data
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+        
+
+volumes:
+  pgdata:            

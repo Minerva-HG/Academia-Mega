@@ -1,0 +1,24 @@
+# Imagen base con Node.js 18 y vim
+FROM node:18
+
+# Instala vim para edición dentro del contenedor
+RUN apt-get update && apt-get install -y vim
+
+# Establece el directorio de trabajo
+WORKDIR /app
+
+# Copia archivos de configuración
+COPY package*.json ./
+COPY tsconfig.json ./
+
+# Instala dependencias (incluye devDependencies)
+RUN npm install
+
+# Copia el resto del código fuente
+COPY . .
+
+# Expone el puerto por defecto (puedes ajustarlo si es necesario)
+EXPOSE 3000
+
+# Comando por defecto: ejecuta el modo watch (hot reload)
+CMD ["npm", "run", "dev"]
