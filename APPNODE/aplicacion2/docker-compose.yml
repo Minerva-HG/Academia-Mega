@@ -12,6 +12,7 @@ services:
   backend:
     build:
       context: ./backend
+      dockerfile: Dockerfile
     container_name: backend
     env_file:
       - ./backend/src/.env
@@ -19,8 +20,8 @@ services:
       - mongodb
     networks:
       - net-backend-mongo
-      - net-backend-frotend
-    
+      - net-backend-frontend
+
   frontend:
     build:
       context: ./frontend
@@ -29,13 +30,13 @@ services:
     depends_on:
       - backend
     networks:
-      - net-backend-frotend
+      - net-backend-frontend
 
 volumes:
   mongo-data:
 
 networks:
-  net-backend-frotend:
+  net-backend-frontend:
     driver: bridge
   net-backend-mongo:
     driver: bridge
