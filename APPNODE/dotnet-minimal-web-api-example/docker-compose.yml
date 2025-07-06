@@ -1,0 +1,31 @@
+services:
+  api:
+    build: .
+    image: minimalapi:latest
+    networks: 
+      - appnet
+    logging:
+      driver: json-file
+      options: 
+        max-size: 10m
+        max-file: 3
+
+  nginx:
+    build:
+      context: ./nginx
+    image: custom-nginx:latest
+    ports:
+      - 8080:8080
+    depends_on:
+      - api
+    networks:
+      - appnet
+    logging:
+      driver: json-file
+      options: 
+        max-size: 10m
+        max-file: 3
+
+networks:
+  appnet:
+    driver: bridge
