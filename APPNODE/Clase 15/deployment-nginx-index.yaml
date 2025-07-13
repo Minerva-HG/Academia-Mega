@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-custom
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-custom
+  template:
+    metadata:
+      labels:
+        app: nginx-custom
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: APP_COLOR
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: APP_COLOR
+        - name: WELCOME_MSG
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: WELCOME_MSG
+        volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html
+          readOnly: true
+      volumes:
+      - name: html
+        configMap:
+          name: nginx-index
+          items:
+          - key: index.html
+            path: index.html
+      - name: certs
+        secret:
+          secretName: mi-cert-secret
+          items: 
+          - key: tls.crt
+            path: tls.crt
