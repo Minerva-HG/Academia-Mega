@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-volumen1
+spec:
+  containers:
+  - name: writer
+    image: busybox
+    command: ["sh", "-c", "echo 'Hola desde el writer' > /data/archivo.txt && sleep 3600"]
+    volumeMounts:
+    - name: datos-compartidos
+      mountPath: /data
+  - name: reader
+    image: busybox
+    command: ["sh", "-c", "sleep 5 && echo 'Contenido del archivo: ' && cat /data/archivo.txt && sleep 3600"]
+    volumeMounts:
+    - name: datos-compartidos
+      mountPath: /data
+  volumes:
+  - name: datos-compartidos
+    emptyDir: {}
+    
