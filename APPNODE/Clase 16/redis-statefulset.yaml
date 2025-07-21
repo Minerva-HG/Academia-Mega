@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: redis
+spec:
+  serviceName: "redis"
+  replicas: 2
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec: 
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: redis
+        image: redis:latest
+        ports:
+        - containerPort: 6379
+        command: ["sh", "-c"]
+        args: 
+        - |
+          if [[ "$(hostname)" == *-0 ]]; then
+            echo "Starting redis master";
+            redis-server;
+          else
+            echo "Starting Redis Replica, pointing to redis-0";
+            redis-server --replicaof redis-0.redis.default.svc.cluster.local 6379;
+          fi
+        volumeMounts:
+        - name: data
+          mountPath: /data
+  volumeClaimTemplates:
+  - metadata:
+      name: data
+    spec: 
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 100Mi
