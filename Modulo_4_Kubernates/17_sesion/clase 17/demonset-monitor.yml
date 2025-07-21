@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: demo-monitor
+spec:
+  selector:
+    matchLabels:
+      app: demo-monitor
+  template:
+    metadata:
+      labels:
+        app: demo-monitor
+    spec:
+      containers:
+      - name: monitor
+        image: busybox
+        args:
+        - /bin/sh
+        - -c
+        - |
+          echo "Starting node monitor on $(hostname)";
+          while true; do echo "Monitoring node $(hostname)..."; sleep 60; done

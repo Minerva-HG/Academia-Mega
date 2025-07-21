@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: date-printer
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: dater
+            image: busybox
+            command: ["sh", "-c", "date; echo Hello from the cronjob"]
+          restartPolicy: OnFailure
