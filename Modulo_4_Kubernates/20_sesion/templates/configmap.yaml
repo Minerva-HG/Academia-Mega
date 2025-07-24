@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: {{ include "chart-clase20.fullname" . }}-index
+data:
+    index.html: |
+        <html><body><h1>{{ .Values.message }}</h1></body></html>
