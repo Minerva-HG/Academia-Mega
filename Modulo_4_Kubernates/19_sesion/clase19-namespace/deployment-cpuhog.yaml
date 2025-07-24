@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: cpu-hog, namespace: dev}
+spec:
+  replicas: 5
+  selector: {matchLabels, app: cpu_hog}
+  template:
+    metadata: {labels: {app: cpu_hog}}
+    spec:
+      containers:
+      - name: cpu-hog
+        image: polinux/cpu-hog
+        resources:
+          requests:
+            cpu: "200m"
+            memory: "100Mi"
+          limits:
+            cpu: "500m"
+            memory: "200Mi"
+      serviceAccountName: pod-monitor-sa
+  
