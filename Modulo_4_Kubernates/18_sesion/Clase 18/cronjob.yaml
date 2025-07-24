@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: pod-monitor-job
+spec:
+  schedule: "*/1 * * * *"
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: pod-monitor-sa
+          containers:
+          - name: pod-monitor-container
+            image: pod-monitor:v1
+            imagePullPolicy: Never
+          restartPolicy: OnFailure
