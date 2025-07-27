@@ -1,0 +1,31 @@
+{{- include "clase21-chart.helpers.labels" . | nindent 0 }}
+spec:
+	replicas: 1
+	selector: 
+		matchLabels:
+			{{- include "clase21-chart.helpers.selectorLabels" . | nindent 6 }}
+	template:
+		metadata:
+			labels:
+				{{- include "clase21-chart.helpers.selectorLabels" . | nindent 8 }}
+		spec:
+			containers:
+				- name: {{ .Chart.Name }}
+					image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+					imagePullPollicy: {{ .Values.image.pullPolicy }}
+					ports:
+						- name: http
+							containerPort: 80
+							protocol: TCP
+					{{- if .Values.configMap.enabled }}
+					volumeMounts:
+						- name: config-volume
+							mountPath: /usr/share/nginx/html
+					{{- end}}
+			{{- if .Values.configMap.enabled }}
+			volumes:
+				- name: config-volume
+					configMap:
+						name: {{ .Chat.Name }}-configmap
+			{{- end}}
+

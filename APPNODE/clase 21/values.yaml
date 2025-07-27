@@ -1,0 +1,35 @@
+# Configuración de la imagen
+image:
+  repository: nginx
+  tag: latest
+  pullPolicy: IfNotPresent
+
+# Configuración del servicio de la aplicación
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30080
+
+# La creación del configMap
+configMap:
+  enabled: true
+  data: 
+    index.html: |
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>¡Hola desde Helm!</title>
+      </head>
+      <body>
+        <h1>¡Mi App configurada con un ConfigMap!</h1>
+      </body>
+      </html>
+
+# Lista de puertos adicionales a exponer
+extraPorts:
+  - name: "http-alternative"
+    port: 8000
+    targetPort: 8080
+  - name: "metrics"
+    port: 9113
+    targetPort: 9113
