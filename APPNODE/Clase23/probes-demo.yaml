@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: probes-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: probes
+  template:
+    metadata:
+      labels:
+        app: probes
+    spec:
+      containers:
+      - name: demo
+        image: gaiaadm/pumba:latest
+        # 1. Levantar un miniserver http en el puerto 8080
+        # 2. Después de 60 segundos vamos a borrar un archivo para que falle
+        # 3. Va a tardar en recuperarse 20s
+        command: ["sh", "-c"]
+        args:
+          - |
+            printf 'Booting demo container ...\n';
+            (sleep 20 && touch /tmp/ready) &
+            (sleep 60 && rm -f /tmp/healthy) &
+            touch /tmp/healthy;
+            while true; do
+              { echo -e "HTTP/1.1 200 OK\r\n\rREADY";} | nc -l -p 8080 -q 1
+            done
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          failureThreshold: 1 # Al fallo marca el pod como Not Ready
+        livenessProbe:
+          exec:
+            command: ["test", "-f", "/tmp/healthy"]
+          initialDelaySeconds: 10
+          periodSeconds: 5
+          failureThreshold: 2
+        startupProbe:
+          exec: 
+            command: ["test", "-f", "/tmp/ready"]
+          failureThreshold: 20 # 100s de margen = 20*5s 
+          periodSeconds: 5

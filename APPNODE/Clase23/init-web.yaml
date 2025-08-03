@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: web}}
+  template:
+    metadata: {labels: {app: web}}
+    spec:
+      initContainers:
+      - name: wait-db
+        image: busybox
+        command: ['sh', '-c',
+          'echo "Esperando a fake-db:5432...";
+          until nc -z fake-db 5432; do sleep 3; done;
+          echo "Base lista"']
+      containers:
+      - name: web
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
