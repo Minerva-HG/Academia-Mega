@@ -1,0 +1,18 @@
+/* Autor: Minerva Herandez Godinez
+// Define los modelos de datos usados para deserializar la respuesta de la API del clima.
+*/
+namespace SkyCast.Services;
+
+public record WeatherDto(string Name, MainData main, IEnumerable<WeatherInfo> Weather);
+/*// Modelo principal que representa la respuesta del clima. 
+// Name: nombre de la ciudad. 
+// main: datos principales del clima (temperatura, humedad). 
+// Weather: lista de condiciones climáticas (descripción, icono).*/
+public record MainData(double Temp, double Humidity);
+/*// Modelo para los datos principales del clima. 
+// Temp: temperatura actual. 
+// Humidity: humedad actual.*/
+public record WeatherInfo(string Description, string Icon);
+/*// Modelo para la información detallada del clima. 
+// Description: descripción textual del clima. 
+// Icon: identificador del icono del clima.*/
